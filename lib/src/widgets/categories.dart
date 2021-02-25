@@ -5,16 +5,21 @@ import '../commons.dart';
 
 List<Category> categoriesList = [
   Category(name: "Salad", image: "salad.png"),
+  Category(name: "Sea food", image: "fish.png"),
+  Category(name: "Beer", image: "pint.png"),
+  Category(name: "Steak", image: "steak.png"),
+  Category(name: "Fast food", image: "sandwich.png"),
+  Category(name: "Deserts", image: "ice-cream.png"),
 ];
 
 class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return             Container(
+    return Container(
       height: 120.0,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: 10,
+        itemCount: categoriesList.length,
         itemBuilder: (_, index) {
           return Padding(
             padding: const EdgeInsets.all(8.0),
