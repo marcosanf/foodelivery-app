@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodelivery/src/commons.dart';
+import 'package:foodelivery/src/widgets/categories.dart';
 import 'package:foodelivery/src/widgets/custom_text.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -66,6 +67,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 5.0,),
+            Categories(),
           ],
         ),
       ),
