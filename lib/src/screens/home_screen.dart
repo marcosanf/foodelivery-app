@@ -3,6 +3,7 @@ import 'package:foodelivery/src/commons.dart';
 import 'package:foodelivery/src/widgets/categories.dart';
 import 'package:foodelivery/src/widgets/custom_text.dart';
 import 'package:foodelivery/src/widgets/featured_products.dart';
+import 'package:foodelivery/src/widgets/small_button.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -84,10 +85,99 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Featured(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: CustomText(
+                text: 'Popular',
+                size: 20.0,
+                colors: grey,
+              ),
+            ),
+            Stack(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20.0),
+                    child: Image.asset("images/food.jpg"),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SmallButton(icon: Icons.favorite),
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Container(
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: white,
+                            borderRadius: BorderRadius.circular(5)
+                          ),
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(2.0),
+                                child: Icon(Icons.star, color: Colors.yellow.shade900,size: 20.0,),
+                              ),
+                              Text('4.5')
+                            ],
+                          )
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  width: 50.0,
+                  decoration: BoxDecoration(
+                    color: white,
+                    borderRadius: BorderRadius.circular(5.0)
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),
-
+      bottomNavigationBar: Container(
+        color: white,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                'images/home.png',
+                width: 26,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                'images/target.png',
+                width: 26,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                'images/shopping-bag.png',
+                width: 26,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                'images/avatar.png',
+                width: 26,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
