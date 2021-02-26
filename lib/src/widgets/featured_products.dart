@@ -96,7 +96,7 @@ class Featured extends StatelessWidget {
                             child: productList[index].wishList
                                 ? Icon(Icons.favorite, size: 18.0, color: red)
                                 : Icon(Icons.favorite_border,
-                                    size: 18.0, color: red),
+                                size: 18.0, color: red),
                           ),
                         ),
                       )
