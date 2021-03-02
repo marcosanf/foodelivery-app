@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:foodelivery/src/helpers/commons.dart';
 import 'package:foodelivery/src/screens/home_screen.dart';
-import 'file:///C:/Users/Usuario/IdeaProjects/foodelivery/lib/src/commons.dart';
 
 void main() {
   runApp(MyApp());
