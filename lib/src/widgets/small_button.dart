@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodelivery/src/commons.dart';
+import 'file:///C:/Users/Usuario/IdeaProjects/foodelivery/lib/src/helpers/commons.dart';
 
 class SmallButton extends StatelessWidget {
 
