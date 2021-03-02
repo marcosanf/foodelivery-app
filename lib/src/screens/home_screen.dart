@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodelivery/src/commons.dart';
+import 'package:foodelivery/src/widgets/bottom_navigation_button.dart';
 import 'package:foodelivery/src/widgets/categories.dart';
 import 'package:foodelivery/src/widgets/custom_text.dart';
 import 'package:foodelivery/src/widgets/featured_products.dart';
@@ -130,11 +132,69 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  width: 50.0,
-                  decoration: BoxDecoration(
-                    color: white,
-                    borderRadius: BorderRadius.circular(5.0)
+                Positioned.fill(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        height: 100.0,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20.0), bottomRight: Radius.circular(20.0)),
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter,
+                            colors: [
+                              Colors.black.withOpacity(0.8),
+                              Colors.black.withOpacity(0.7),
+                              Colors.black.withOpacity(0.6),
+                              Colors.black.withOpacity(0.6),
+                              Colors.black.withOpacity(0.4),
+                              Colors.black.withOpacity(0.1),
+                              Colors.black.withOpacity(0.05),
+                              Colors.black.withOpacity(0.025),
+                            ],
+                          )
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned.fill(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(12, 8, 8, 8),
+                            child: RichText(text: TextSpan(
+                              children: [
+                                TextSpan(text: "Pancakes \n", style: TextStyle(
+                                  fontSize: 20.0, fontWeight: FontWeight.bold
+                                )),
+                                TextSpan(text: "by: ", style: TextStyle(fontSize:  16.0, fontWeight: FontWeight.w100)),
+                                TextSpan(text: "Pizza hut"),
+                              ]
+                            )),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: RichText(
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(text: "\$12.99\n", style: TextStyle(
+                                    fontSize: 22.0, fontWeight: FontWeight.w300
+                                  ))
+                                ]
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
                   ),
                 )
               ],
@@ -143,41 +203,19 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
+        height: 60,
         color: white,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                'images/home.png',
-                width: 26,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                'images/target.png',
-                width: 26,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                'images/shopping-bag.png',
-                width: 26,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                'images/avatar.png',
-                width: 26,
-              ),
-            ),
+            ButtonNavigation(image: 'home.png',name: 'Home',),
+            ButtonNavigation(image: 'target.png',name: 'Near by',),
+            ButtonNavigation(image: 'shopping-bag.png',name: 'Cart',),
+            ButtonNavigation(image: 'avatar.png',name: 'Account',),
           ],
         ),
       ),
     );
   }
 }
+
