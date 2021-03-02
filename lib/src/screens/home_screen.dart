@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:foodelivery/src/commons.dart';
+import 'file:///C:/Users/Usuario/IdeaProjects/foodelivery/lib/src/helpers/commons.dart';
 import 'package:foodelivery/src/widgets/bottom_navigation_button.dart';
 import 'package:foodelivery/src/widgets/categories.dart';
 import 'package:foodelivery/src/widgets/custom_text.dart';
