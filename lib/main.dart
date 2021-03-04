@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodelivery/src/helpers/commons.dart';
-import 'package:foodelivery/src/screens/home_screen.dart';
+import 'package:foodelivery/src/screens/login_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: red,
       ),
-      home: HomeScreen(),
+      home: LoginScreen(),
     );
   }
 }
