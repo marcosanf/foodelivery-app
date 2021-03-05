@@ -59,8 +59,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     decoration: InputDecoration(
                         hintText: 'Password',
                         border: InputBorder.none,
-                        icon: Icon(Icons.lock)
+                        icon: Icon(Icons.lock),
                     ),
+                    obscureText: true,
                   ),
                 ),
               ),
